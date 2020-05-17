@@ -1,8 +1,9 @@
-# Cache objects
-packer_cache/
+# OSX garbage
+.DS_Store
 
-# Crash log
-crash.log
-
-# For built boxes
-*.box
+*.log
+.idea
+*.swp
+temp*
+*/temp*
+*/*/temp*
