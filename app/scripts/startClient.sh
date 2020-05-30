@@ -86,7 +86,7 @@ dockerize -template "/etc/config/qBittorrent.conf.tmpl:${QBITTORRENT_CONFIG_PATH
 # start the config updater
 exec /usr/local/scripts/config_updater.sh &
 
-if [[ "${QBITTORRENT_START_DELAY}" =~ ^[0-9]+$ ]]; then
+if [[ "${QBITTORRENT_START_DELAY-}" =~ ^[0-9]+$ ]]; then
     echo "[QBITTORRENT] Delaying the startup by ${QBITTORRENT_START_DELAY}..." >> ${LOG_FILE}
     sleep "${QBITTORRENT_START_DELAY}"
 fi
