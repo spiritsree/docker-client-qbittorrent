@@ -28,6 +28,7 @@ ADD ./app/scripts /usr/local/scripts
 ENV HEALTH_CHECK_HOST=www.google.com \
     ENABLE_FILE_LOGGING=true \
     LOG_FILE=/data/application.log \
+    QBITTORRENT_START_DELAY= \
     QBITTORRENT_RUNAS_ROOT=false \
     QBITTORRENT_SETTING_DEFAULT=false \
     QBITTORRENT_WATCH_DIR=/data/watch \
