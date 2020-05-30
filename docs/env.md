@@ -23,6 +23,7 @@ Variable | Description | Default |
 `QBITTORRENT_RUNAS_ROOT` | Run qBittorrent client as root user | `false` |
 `QBITTORRENT_SETTING_DEFAULT` | Use the default config | `false` |
 `QBITTORRENT_HOME` | qBittorrent Home | `/data/qbittorrent-home` |
+`QBITTORRENT_START_DELAY` | Start delay in seconds | |
 
 **Downloads**
 

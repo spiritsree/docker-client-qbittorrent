@@ -86,5 +86,10 @@ dockerize -template "/etc/config/qBittorrent.conf.tmpl:${QBITTORRENT_CONFIG_PATH
 # start the config updater
 exec /usr/local/scripts/config_updater.sh &
 
+if [[ "${QBITTORRENT_START_DELAY}" =~ ^[0-9]+$ ]]; then
+    echo "[QBITTORRENT] Delaying the startup by ${QBITTORRENT_START_DELAY}..." >> ${LOG_FILE}
+    sleep "${QBITTORRENT_START_DELAY}"
+fi
+
 echo "[QBITTORRENT] qBittorrent will run as \"${QBITTORRENT_USER}\" with UID \"${QBITTORRENT_UID}\" and GID \"${QBITTORRENT_GID}\"" >> ${LOG_FILE}
 exec su -p "${QBITTORRENT_USER}" -s /bin/bash -c "qbittorrent-nox --profile=${QBITTORRENT_HOME}"
